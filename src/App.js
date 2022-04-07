@@ -16,7 +16,7 @@ function App() {
     <PageWrapper>
       <PageBlock>
         <Emoji />
-        <Title>Freedum Timer</Title>
+        <Title>Freedom Timer</Title>
         <Time>
           {time.toLocaleDateString()}
           {time.toLocaleTimeString()}
@@ -68,9 +68,9 @@ const PageWrapper = styled.div`
 const PageBlock = styled.div`
   width: 100%;
   max-width: 1000px;
-  padding: 64px 40px 0 40px;
+  padding: 64px 40px 64px 40px;
   background-color: #242527;
-  height: calc(90vh - 100px);
+  height: calc(90vh - 128px);
   align-items: center;
   border-radius: 24px;
   margin: 0 auto;
@@ -107,7 +107,6 @@ const Dday = styled.div`
 
 const ComunityBlockWrapper = styled.div`
   width: 100%;
-  margin: 40px 0;
   display: flex;
   flex-direction: column;
 `;
@@ -148,6 +147,7 @@ const Profile = styled.div`
 const RegisterWrapper = styled.div`
   width: 100%;
   display: flex;
+  margin-top: 10px;
 `;
 
 const RegisterInput = styled.input`
