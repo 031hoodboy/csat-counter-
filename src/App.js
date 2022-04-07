@@ -18,7 +18,7 @@ function App() {
         <Emoji />
         <Title>Freedom Timer</Title>
         <Time>
-          {time.toLocaleDateString()}
+          {time.toLocaleDateString()}&nbsp;
           {time.toLocaleTimeString()}
         </Time>
 
@@ -39,8 +39,11 @@ function App() {
           <RegisterButton>등록</RegisterButton>
         </RegisterWrapper>
         <Designed>
-          Designed by &nbsp;<Profile>Awareso</Profile>&nbsp; & Engineering
-          by&nbsp;
+          Designed by &nbsp;
+          <Profile href="http://google.co.kr" target="_blank">
+            Awareso
+          </Profile>
+          &nbsp; & Engineering by&nbsp;
           <Profile>hoodboy</Profile>
         </Designed>
       </PageBlock>
@@ -63,6 +66,10 @@ const PageWrapper = styled.div`
     font-style: normal;
   }
   font-family: "Pretendard Variable";
+  font-size: 14px;
+  @media screen and (max-width: 630px) {
+    font-size: 12px;
+  }
 `;
 
 const PageBlock = styled.div`
@@ -91,11 +98,17 @@ const Title = styled.div`
   font-size: 52px;
   font-weight: 700;
   margin-top: 24px;
+  @media screen and (max-width: 630px) {
+    font-size: 36px;
+  }
 `;
 
 const Time = styled.div`
   margin-top: 10px;
   font-size: 20px;
+  @media screen and (max-width: 630px) {
+    font-size: 16px;
+  }
 `;
 
 const Dday = styled.div`
@@ -103,6 +116,9 @@ const Dday = styled.div`
   font-weight: 700;
   color: #1859ff;
   margin-top: 30px;
+  @media screen and (max-width: 630px) {
+    font-size: 34px;
+  }
 `;
 
 const ComunityBlockWrapper = styled.div`
@@ -114,12 +130,12 @@ const ComunityBlockWrapper = styled.div`
 const Coments = styled.div`
   margin: 15px 20px;
   font-weight: 700;
-  font-size: 14px;
 `;
 
 const ComunityBlock = styled.div`
   width: calc(100% - 40px);
-  height: 400px;
+  height: 30vh;
+  max-height: 400px;
   padding: 10px 20px 20px 20px;
   background-color: #313235;
   border-radius: 12px;
@@ -138,37 +154,58 @@ const Designed = styled.div`
   color: #848484;
   display: flex;
   font-weight: 400;
+  text-align: center;
 `;
 
-const Profile = styled.div`
+const Profile = styled.a`
+  text-decoration: none;
   font-weight: 700;
+  font-size: 16px;
+  color: #848484;
+  text-align: center;
+  @media screen and (max-width: 630px) {
+    font-size: 14px;
+  }
 `;
 
 const RegisterWrapper = styled.div`
   width: 100%;
   display: flex;
   margin-top: 10px;
+  justify-content: space-between;
 `;
 
 const RegisterInput = styled.input`
   background-color: #313235;
   outline: none;
   border: none;
-  padding: 12px 0 12px 24px;
+  padding: 12px 24px 12px 24px;
   color: #999999;
   border-radius: 10px;
-  font-size: 14px;
-  width: 88%;
+  width: 85%;
+  @media screen and (max-width: 630px) {
+    padding: 8px 12px 8px 12px;
+  }
 `;
 
 const RegisterButton = styled.div`
+  width: 5%;
+  min-width: 24px;
   padding: 12px 28px;
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-weight: 700;
   background-color: #1859ff;
   border-radius: 10px;
   margin-left: 10px;
+  &:active {
+    transform: scale(0.97);
+  }
+  @media screen and (max-width: 630px) {
+    padding: 8px 14px;
+  }
 `;
 
 export default App;
