@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import CalendarImg from "./assets/calendar.png";
-import dDayResult from "./components/DDay";
+import { dDayResult } from "./components/DDay";
 import Clock from "./components/Clock";
 
 function App() {
