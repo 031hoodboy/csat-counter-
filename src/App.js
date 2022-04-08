@@ -40,11 +40,19 @@ function App() {
         </RegisterWrapper>
         <Designed>
           Designed by &nbsp;
-          <Profile href="http://google.co.kr" target="_blank">
+          <Profile
+            href="https://www.instagram.com/seunguk_/?hl=ko"
+            target="_blank"
+          >
             Awareso
           </Profile>
           &nbsp; & Engineering by&nbsp;
-          <Profile>hoodboy</Profile>
+          <Profile
+            href="https://www.instagram.com/031_hood_boy/?hl=ko"
+            target="_blank"
+          >
+            hoodboy
+          </Profile>
         </Designed>
       </PageBlock>
     </PageWrapper>
@@ -200,6 +208,7 @@ const RegisterButton = styled.div`
   background-color: #1859ff;
   border-radius: 10px;
   margin-left: 10px;
+  cursor: pointer;
   &:active {
     transform: scale(0.97);
   }
