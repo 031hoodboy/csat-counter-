@@ -1,28 +1,17 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import CalendarImg from "./assets/calendar.png";
+import dDayResult from "./components/DDay";
+import Clock from "./components/Clock";
 
 function App() {
-  const [time, setTime] = useState(new Date());
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
-    return () => clearInterval(id);
-  }, []);
-
   return (
     <PageWrapper>
       <PageBlock>
         <Emoji />
         <Title>Freedom Timer</Title>
-        <Time>
-          {time.toLocaleDateString()}&nbsp;
-          {time.toLocaleTimeString()}
-        </Time>
-
-        <Dday>D-224</Dday>
+        <Clock />
+        <Dday>D-{dDayResult}</Dday>
         <ComunityBlockWrapper>
           <Coments>Comments 12</Coments>
           <ComunityBlock>
@@ -108,14 +97,6 @@ const Title = styled.div`
   margin-top: 24px;
   @media screen and (max-width: 630px) {
     font-size: 36px;
-  }
-`;
-
-const Time = styled.div`
-  margin-top: 10px;
-  font-size: 20px;
-  @media screen and (max-width: 630px) {
-    font-size: 16px;
   }
 `;
 
