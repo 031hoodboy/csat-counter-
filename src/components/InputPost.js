@@ -67,7 +67,7 @@ const InputPost = () => {
                 전화번호를 입력하시면 추첨을 통해 커피 상품권을 드립니다.
               </ModalContent>
               <ModalPhoneInput
-                placeholder="전화번호"
+                placeholder="전화번호를 입력해주세요."
                 value={number}
                 onChange={numberHandler}
                 type="text"
@@ -181,6 +181,9 @@ const ModalContent = styled.div``;
 const ModalPhoneInput = styled(RegisterInput)`
   width: calc(100% - 48px);
   margin-top: 25px;
+  @media screen and (max-width: 876px) {
+    width: calc(100% - 24px);
+  }
 `;
 
 const RegisterButtonWrapper = styled.div`
