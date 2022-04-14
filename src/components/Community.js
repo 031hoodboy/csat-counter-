@@ -9,7 +9,9 @@ const Community = () => {
     const fetchPosts = async () => {
       try {
         setPosts(null);
-        const response = await axios.get("http://141.164.51.211:8080/posts");
+        const response = await axios.get(
+          "https://eaf0-2401-c080-1c02-d18-5400-3ff-fef1-6ea4.jp.ngrok.io/posts"
+        );
         setPosts(response.data.reverse());
       } catch (e) {
         console.log("error");
