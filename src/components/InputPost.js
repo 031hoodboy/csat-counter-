@@ -27,7 +27,7 @@ const InputPost = () => {
 
     axios
       .post(
-        "https://eaf0-2401-c080-1c02-d18-5400-3ff-fef1-6ea4.jp.ngrok.io/post",
+        "https://ec34-2401-c080-1c02-d18-5400-3ff-fef1-6ea4.jp.ngrok.io/post",
         body
       )
       .then((res) => console.log(res));

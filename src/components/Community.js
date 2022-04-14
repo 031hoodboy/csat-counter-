@@ -10,7 +10,7 @@ const Community = () => {
       try {
         setPosts(null);
         const response = await axios.get(
-          "https://eaf0-2401-c080-1c02-d18-5400-3ff-fef1-6ea4.jp.ngrok.io/posts"
+          "https://ec34-2401-c080-1c02-d18-5400-3ff-fef1-6ea4.jp.ngrok.io/posts"
         );
         setPosts(response.data.reverse());
       } catch (e) {
