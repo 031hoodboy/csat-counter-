@@ -43,6 +43,8 @@ const InputPost = () => {
         placeholder="내용을 입력해주세요"
         value={content}
         onChange={contentHandler}
+        type="text"
+        maxLength="50"
       />
       <RegisterButton type="submit" onClick={Alert}>
         등록
