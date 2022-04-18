@@ -19,10 +19,6 @@ const Community = () => {
       }
     };
     fetchPosts();
-
-    // //  return(
-    // //    <Profile>{rand_1_10}</Profile>
-    // //  )
   }, []);
 
   if (!posts) return "글이 없습니다. 첫글을 등록해주세요.";

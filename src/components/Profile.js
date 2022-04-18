@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+
 const Profile = () => {
   const index = Math.floor(Math.random() * 8) + 1;
-
   return (
     <ProfileBlock>
       <ProfileImg src={require(`../assets/profile${index}.png`)} />
