@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import Profile from "./Profile";
 import axios from "axios";
 
 const Community = () => {
@@ -18,9 +19,11 @@ const Community = () => {
       }
     };
     fetchPosts();
-  }, []);
 
-  console.log(posts);
+    // //  return(
+    // //    <Profile>{rand_1_10}</Profile>
+    // //  )
+  }, []);
 
   if (!posts) return "글이 없습니다. 첫글을 등록해주세요.";
 
@@ -29,7 +32,7 @@ const Community = () => {
       <Coments>Comments {posts.length}</Coments>
       <ComunityBlock>
         {posts.map((post) => (
-          <CommentBlock>
+          <CommentBlock key={post.id}>
             <Profile />
             <PostContent>{post.content}</PostContent>
           </CommentBlock>
@@ -73,17 +76,6 @@ const CommentBlock = styled.div`
   padding: 20px;
   @media screen and (max-width: 630px) {
     padding: 10px;
-  }
-`;
-
-const Profile = styled.div`
-  min-width: 50px;
-  min-height: 50px;
-  background-color: #313235;
-  border-radius: 100%;
-  @media screen and (max-width: 630px) {
-    min-width: 48px;
-    min-height: 48px;
   }
 `;
 

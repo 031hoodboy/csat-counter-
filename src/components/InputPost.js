@@ -24,8 +24,6 @@ const InputPost = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(content);
-    console.log(number);
     let body = {
       content: content,
       number: number,
