@@ -70,6 +70,7 @@ const CommentBlock = styled.div`
   display: flex;
   align-items: center;
   padding: 20px;
+
   @media screen and (max-width: 630px) {
     padding: 10px;
   }
@@ -78,9 +79,10 @@ const CommentBlock = styled.div`
 const PostContent = styled.div`
   margin-left: 24px;
   height: 50px;
-  overflow: scroll;
   display: flex;
   align-items: center;
+  overflow: scroll;
+
   @media screen and (max-width: 630px) {
     margin-left: 14px;
     height: 48px;
